@@ -1,8 +1,8 @@
 {
-    "username":"OneFastBoi",
+    "username": "",
     "tag": " MAL statictics ",
-    "xOffset":2,
-    "yOffset":0,
+    "xOffset": 2,
+    "yOffset": 0,
     "stats": [
         {
             "name": "Username",
@@ -11,14 +11,14 @@
             "headerStyle": "1;31"
         },
         {
-            "category":"Decoration",
-            "name":"space"
+            "category": "Decoration",
+            "name": "space"
         },
         {
-            "category":"Decoration",
-            "name":"tag",
-            "value":"-- Anime --",
-            "style":"1"
+            "category": "Decoration",
+            "name": "tag",
+            "value": "-- Anime --",
+            "style": "1"
         },
         {
             "name": "Watching",
@@ -39,14 +39,14 @@
             "headerStyle": "1;31"
         },
         {
-            "category":"Decoration",
-            "name":"space"
+            "category": "Decoration",
+            "name": "space"
         },
         {
-            "category":"Decoration",
-            "name":"tag",
-            "value":"-- Manga --",
-            "style":"1"
+            "category": "Decoration",
+            "name": "tag",
+            "value": "-- Manga --",
+            "style": "1"
         },
         {
             "name": "Reading",
@@ -59,7 +59,8 @@
             "category": "Manga",
             "valueStyle": "",
             "headerStyle": "1;31"
-        },        {
+        },
+        {
             "name": "Chapters",
             "category": "Manga",
             "valueStyle": "",

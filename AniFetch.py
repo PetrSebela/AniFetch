@@ -2,19 +2,19 @@ from bs4 import BeautifulSoup
 from requests import request
 import json
 import display
-from rich import print
+import sys
 
 ANIMELIST = 'https://myanimelist.net/profile/'
 config = {}
 
 decoration = {
-    'underline': lambda length: "-"* length,
+    'underline': lambda length: "-" * length,
     'space': ''
 }
 
 
 data = {
-    'User': { },
+    'User': {},
     'Anime': {},
     'Manga': {}
 }
@@ -22,13 +22,17 @@ data = {
 logo = []
 logoWidth = 0
 
+
 def loadConfig(path):
     global config
     try:
         with open(path) as configFile:
             fileContent = configFile.read()
             config = json.loads(fileContent)
-            data['User']['Username']= config['username']
+            if sys.argv[len(sys.argv)-1] != "main.py":
+                config['username'] = sys.argv[len(sys.argv)-1]
+            data['User']['Username'] = config['username']
+
         return True
     except:
         return False
@@ -37,7 +41,7 @@ def loadConfig(path):
 def fetchData(username):
     global data
 
-    page = request('get', ANIMELIST + username)        
+    page = request('get', ANIMELIST + username)
     soup = BeautifulSoup(page.content, 'html.parser')
 
     if page.status_code == 404:
@@ -83,20 +87,19 @@ def showStats(display):
 
 if __name__ == "__main__":
     if loadConfig('config.json') and fetchData(config['username']):
-        print(data)
         frame = display.frame('fit',
-                            border=True,
-                            borderSpacingX=config['borderSpacingX'],
-                            borderSpacingY=config['borderSpacingY'])
+                              border=True,
+                              borderSpacingX=config['borderSpacingX'],
+                              borderSpacingY=config['borderSpacingY'])
 
         if config['showLogo']:
             with open(config['logo']['path']) as file:
                 logo = file.read().splitlines()
                 logoWidth = len(max(logo, key=len))
                 frame.addAsciiArt(logo,
-                                y=config['logo']['y'],
-                                style=config['logo']['style'])
+                                  y=config['logo']['y'],
+                                  style=config['logo']['style'])
 
         showStats(display=frame)
         frame.show(config['clearOnLaunch'],
-                config['tag'])
+                   config['tag'])
