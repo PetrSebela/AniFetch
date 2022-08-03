@@ -1,0 +1,77 @@
+{
+    "tag": " MAL statictics ",
+    "xOffset":2,
+    "yOffset":0,
+    "stats": [
+        {
+            "name": "Username",
+            "category": "User",
+            "valueStyle": "1",
+            "headerStyle": "1;31"
+        },
+        {
+            "category":"Decoration",
+            "name":"space"
+        },
+        {
+            "category":"Decoration",
+            "name":"tag",
+            "value":"-- Anime --",
+            "style":"1"
+        },
+        {
+            "name": "Watching",
+            "category": "Anime",
+            "valueStyle": "",
+            "headerStyle": "1;31"
+        },
+        {
+            "name": "Completed",
+            "category": "Anime",
+            "valueStyle": "",
+            "headerStyle": "1;31"
+        },
+        {
+            "name": "Episodes",
+            "category": "Anime",
+            "valueStyle": "",
+            "headerStyle": "1;31"
+        },
+        {
+            "category":"Decoration",
+            "name":"space"
+        },
+        {
+            "category":"Decoration",
+            "name":"tag",
+            "value":"-- Manga --",
+            "style":"1"
+        },
+        {
+            "name": "Reading",
+            "category": "Manga",
+            "valueStyle": "",
+            "headerStyle": "1;31"
+        },
+        {
+            "name": "Completed",
+            "category": "Manga",
+            "valueStyle": "",
+            "headerStyle": "1;31"
+        },        {
+            "name": "Chapters",
+            "category": "Manga",
+            "valueStyle": "",
+            "headerStyle": "1;31"
+        }
+    ],
+    "showLogo": true,
+    "logo": {
+        "path": "logoTest.txt",
+        "style": "1",
+        "y": 2
+    },
+    "clearOnLaunch": true,
+    "borderSpacingX": 2,
+    "borderSpacingY": 1
+}
