@@ -4,4 +4,13 @@ AniFetch is CLI script for fetching data from MyAnimeList.com
 
 ## Usage
 
-`AniFetch.py <username>`
+
+`python3 AniFetch.py <username>`
+
+or
+`chmod +x AniFetch.py`
+
+then 
+`./AniFetch.py <username>`
+
+alternativly you can set the username in config.json file
